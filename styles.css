@@ -1,0 +1,186 @@
+@font-face {
+    font-family: "OPPOSans-Ver2-Bold";
+    src: url(https://www.oppo.com/content/dam/statics/fonts/cn/OPPOSans3.0cn-Bold.woff2) format("woff2"), url(https://www.oppo.com/content/dam/statics/fonts/cn/OPPOSans3.0cn-Bold.woff) format("woff"), url(https://www.oppo.com/content/dam/statics/fonts/cn/OPPOSans3.0cn-Bold.ttf) format("truetype");
+    font-variation-settings: 'wght' 700;
+    font-style: normal;
+    font-display: swap
+}
+
+@font-face {
+    font-family: "OPPOSans-Ver2-Medium";
+    src: url(https://www.oppo.com/content/dam/statics/fonts/cn/OPPOSans3.0cn-Medium.woff2) format("woff2"), url(https://www.oppo.com/content/dam/statics/fonts/cn/OPPOSans3.0cn-Medium.woff) format("woff"), url(https://www.oppo.com/content/dam/statics/fonts/cn/OPPOSans3.0cn-Medium.ttf) format("truetype");
+    font-variation-settings: 'wght' 500;
+    font-style: normal;
+    font-display: swap
+}
+
+@font-face {
+    font-family: "OPPOSans-Ver2-Regular";
+    src: url(https://www.oppo.com/content/dam/statics/fonts/cn/OPPOSans3.0cn-Regular.woff2) format("woff2"), url(https://www.oppo.com/content/dam/statics/fonts/cn/OPPOSans3.0cn-Regular.woff) format("woff"), url(https://www.oppo.com/content/dam/statics/fonts/cn/OPPOSans3.0cn-Regular.ttf) format("truetype");
+    font-variation-settings: 'wght' 400;
+    font-style: normal;
+    font-display: swap
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "OPPOSans-Ver2-Bold";
+}
+
+.page-container {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.header {
+    width: 100%;
+    min-height: 360px;
+    background: url('background.jpg') no-repeat center center;
+    background-size: cover;
+}
+
+.name {
+    width: 80%;
+    height: 200px;
+    margin: -100px auto 0 auto;
+    background: rgba(255, 255, 255, 0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #DD9FE4;
+    padding: 0;
+    line-height: 1;
+    font-size: 5rem;
+}
+
+.footer {
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 14px;
+    color: #33333391;
+}
+
+@media (max-width: 768px) {
+
+    .name {
+        font-size: 3rem;
+        width: 90%;
+    }
+    .header {
+        min-height: 200px; /* 或者使用 vh 单位，如：min-height: 50vh; */
+    }
+}
+
+.button {
+    justify-content: center;
+    gap: 10px;
+    background: linear-gradient(to left, rgb(221 159 228), rgb(149, 110, 255));
+    border-radius: 30px;
+    color: rgb(255, 255, 255);
+    font-weight: 600;
+    border: none;
+    position: relative;
+    cursor: pointer;
+    transition-duration: .2s;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.116);
+    width: 80%;
+    height: 60px;
+    margin: 20px auto;
+    display: flex;
+    align-items: center;
+}
+
+.item, .item i {
+    font-style: normal;
+    font-size: 16px;
+}
+
+.bell {
+    width: 2.5em;
+}
+
+.bell path {
+    fill: rgb(255, 255, 255);
+}
+
+.button:hover {
+    background: linear-gradient(to left, rgb(154, 131, 255), rgb(135, 91, 255));
+}
+
+.button:active {
+    transform: scale(0.97);
+    transition-duration: .2s;
+}
+
+.button:hover .bell {
+    animation: bellRing 0.9s both;
+}
+
+/* bell ringing animation keyframes*/
+@keyframes bellRing {
+
+    0%,
+    100% {
+        transform-origin: top;
+    }
+
+    15% {
+        transform: rotateZ(10deg);
+    }
+
+    30% {
+        transform: rotateZ(-10deg);
+    }
+
+    45% {
+        transform: rotateZ(5deg);
+    }
+
+    60% {
+        transform: rotateZ(-5deg);
+    }
+
+    75% {
+        transform: rotateZ(2deg);
+    }
+}
+.boxed {
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    border-radius: 100%;
+    margin-top: 10%;
+  }
+  .boxed .item {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-image: url(touxiang.jpg);
+    background-size: cover;
+    background-position: center;
+    mix-blend-mode: screen;
+    background-blend-mode: darken;
+  }
+  a {
+    color: inherit; /* 继承父元素的颜色 */
+    text-decoration: none; /* 去除下划线 */
+    transition: color 0.3s ease; /* 添加平滑过渡效果 */
+  }
+  
+  a:hover,
+  a:focus,
+  a:active {
+    color: #your-hover-color; /* 设置悬停、焦点和活动状态下的颜色 */
+    text-decoration: none; /* 保持无下划线 */
+  }
